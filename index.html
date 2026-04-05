@@ -26,53 +26,50 @@
   <div class="gallery">
 
   <div class="card">
-    <img src="images/photo1.jpg">
-    <p>my babyyy 💕</p>
+    <img src="images/photo1.jpg" onclick="openPopup(this, 'my babyyy 💕')">
+    
   </div>
 
   <div class="card">
-    <img src="images/photo2.jpg">
-    <p>this smile 😭💖</p>
+    <img src="images/photo2.jpg" onclick="openPopup(this, 'this smile 😭💖')">
+    
   </div>
 
   <div class="card">
-    <img src="images/photo3.jpg">
-    <p>cutest person alive 🥺</p>
+    <img src="images/photo3.jpg" onclick="openPopup(this, 'cutest person alive 🥺')">
+
   </div>
 
   <div class="card">
-    <img src="images/photo4.jpg">
-    <p>i love this one so much 💗</p>
+    <img src="images/photo4.jpg" onclick="openPopup(this, 'i love this one so much 💗')">
+    
   </div>
 
   <div class="card">
-    <img src="images/photo5.jpg">
-    <p>how are you this pretty 😭</p>
+    <img src="images/photo5.jpg" onclick="openPopup(this, 'how are you this pretty 😭')">
+    
   </div>
 
   <div class="card">
-    <img src="images/photo6.jpg">
-    <p>my favorite girl 💖</p>
+    <img src="images/photo6.jpg" onclick="openPopup(this, 'my favorite girl 💖')">
+    
   </div>
 
   <div class="card">
-    <img src="images/photo7.jpg">
-    <p>you’re my peace 🌸</p>
+    <img src="images/photo7.jpg" onclick="openPopup(this, 'you’re my peace 🌸')">
+  
   </div>
 
   <div class="card">
-    <img src="images/photo8.jpg">
-    <p>obsessed with you 😭💗</p>
+    <img src="images/photo8.jpg" onclick="openPopup(this, 'obsessed with you 😭💗')">
   </div>
 
   <div class="card">
-    <img src="images/photo9.jpg">
-    <p>this >>> everything 💕</p>
+    <img src="images/photo9.jpg" onclick="openPopup(this, 'this >>> everything 💕')">
   </div>
 
   <div class="card">
-    <img src="images/photo10.jpg">
-    <p>my babyyy forever 💖</p>
+    <img src="images/photo10.jpg" onclick="openPopup(this, 'my babyyy forever 💖')">
   </div>
 
 </div>
@@ -82,5 +79,11 @@
 </audio>
 
 <script src="script.js"></script>
+<!-- 💖 Popup -->
+<div id="popup" class="popup hidden">
+  <span class="close" onclick="closePopup()">×</span>
+  <img id="popupImg">
+  <p id="popupText"></p>
+</div>
 </body>
 </html>

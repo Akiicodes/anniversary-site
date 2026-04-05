@@ -1,10 +1,17 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ffb199);
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffd1dc);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
   color: white;
   text-align: center;
-  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
 }
 
 /* soft glow background */
@@ -50,7 +57,16 @@ button:hover {
   gap: 15px;
   overflow-x: auto;
   padding: 15px;
-  scroll-snap-type: x mandatory;   /* ✨ smooth swipe */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.4);
+  border-radius: 10px;
 }
 
 .card {
@@ -104,6 +120,46 @@ button:hover {
   position: fixed;
   font-size: 20px;
   animation: float 8s linear infinite;
+}
+.card img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+.popup p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 @keyframes float {

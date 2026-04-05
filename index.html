@@ -6,92 +6,106 @@
   <title>For My Babyyy 💖</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    
+<!-- 🔒 LOCK SCREEN -->
+<div id="lockScreen" class="lock-screen">
+  <h1>Wait Babyyy… 💖</h1>
+  <p>Something special is unlocking soon ⏳</p>
+  <h2 id="countdown"></h2>
+</div>
 
-<div class="hearts"></div>
+<!-- 💖 MAIN CONTENT -->
+<div id="mainContent" style="display: none;">
 
-<div class="container">
-  <h1>Happy 1 Month Babyyy 💖</h1>
-  <p id="timer"></p>
+  <div class="hearts"></div>
 
-  <button onclick="showLoveLetter()">Open Something Special 💌</button>
-  <button onclick="toggleMusic()" id="musicBtn">Play Our Song 🎵</button>
+  <div class="container">
+    <h1>Happy 1 Month Babyyy 💖</h1>
+    <p id="timer"></p>
 
-  <!-- 💌 Love Letter -->
-  <div id="letterBox" class="letter hidden">
-    <p id="letterText"></p>
-  </div>
+    <button onclick="showLoveLetter()">Open Something Special 💌</button>
+    <button onclick="toggleMusic()" id="musicBtn">Play Our Song 🎵</button>
 
-  <h2>My Favorite Pictures of You 🥺💖</h2>
-  <div class="gallery">
+    <!-- 💌 Love Letter -->
+    <div id="letterBox" class="letter hidden">
+      <p id="letterText"></p>
+    </div>
 
-  <div class="card">
-    <img src="images/photo1.jpg" onclick="openPopup(this, 'my babyyy 💕')">
-     <p class="caption">my babyyy 💕</p>
-  </div>
+    <h2>My Favorite Pictures of You 🥺💖</h2>
 
-  <div class="card">
-    <img src="images/photo2.jpg" onclick="openPopup(this, 'this smile 😭💖')">
-     <p class="caption">this smile 😭💖</p>
-  </div>
+    <div class="gallery">
 
-  <div class="card">
-    <img src="images/photo3.jpg" onclick="openPopup(this, 'cutest person alive 🥺')">
-      <p class="caption">cutest person alive 🥺</p>
-  </div>
+      <!-- repeat cards -->
+      <div class="card">
+        <img src="images/photo1.jpg" onclick="openPopup(this, 'my babyyy 💕')">
+        <p class="caption">my babyyy 💕</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo4.jpg" onclick="openPopup(this, 'i love this one so much 💗')">
-     <p class="caption">i love this one so much 💗</p>
-  </div>
+      <div class="card">
+        <img src="images/photo2.jpg" onclick="openPopup(this, 'this smile 😭💖')">
+        <p class="caption">this smile 😭💖</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo5.jpg" onclick="openPopup(this, 'how are you this pretty 😭')">
-     <p class="caption">how are you this pretty 😭</p>
-  </div>
+      <div class="card">
+        <img src="images/photo3.jpg" onclick="openPopup(this, 'cutest person alive 🥺')">
+        <p class="caption">cutest person alive 🥺</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo6.jpg" onclick="openPopup(this, 'my favorite girl 💖')">
-     <p class="caption">my favorite girl 💖</p>
-  </div>
+      <div class="card">
+        <img src="images/photo4.jpg" onclick="openPopup(this, 'i love this one so much 💗')">
+        <p class="caption">i love this one so much 💗</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo7.jpg" onclick="openPopup(this, 'you’re my peace 🌸')">
-   <p class="caption">you’re my peace 🌸</p>
-  </div>
+      <div class="card">
+        <img src="images/photo5.jpg" onclick="openPopup(this, 'how are you this pretty 😭')">
+        <p class="caption">how are you this pretty 😭</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo8.jpg" onclick="openPopup(this, 'obsessed with you 😭💗')">
-     <p class="caption">obsessed with you 😭💗</p>
-  </div>
+      <div class="card">
+        <img src="images/photo6.jpg" onclick="openPopup(this, 'my favorite girl 💖')">
+        <p class="caption">my favorite girl 💖</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo9.jpg" onclick="openPopup(this, 'this >>> everything 💕')">
-     <p class="caption">this >>> everything 💕</p>
-  </div>
+      <div class="card">
+        <img src="images/photo7.jpg" onclick="openPopup(this, 'you’re my peace 🌸')">
+        <p class="caption">you’re my peace 🌸</p>
+      </div>
 
-  <div class="card">
-    <img src="images/photo10.jpg" onclick="openPopup(this, 'my babyyy forever 💖')">
-     <p class="caption">my babyyy forever 💖</p>
+      <div class="card">
+        <img src="images/photo8.jpg" onclick="openPopup(this, 'obsessed with you 😭💗')">
+        <p class="caption">obsessed with you 😭💗</p>
+      </div>
+
+      <div class="card">
+        <img src="images/photo9.jpg" onclick="openPopup(this, 'this >>> everything 💕')">
+        <p class="caption">this >>> everything 💕</p>
+      </div>
+
+      <div class="card">
+        <img src="images/photo10.jpg" onclick="openPopup(this, 'my babyyy forever 💖')">
+        <p class="caption">my babyyy forever 💖</p>
+      </div>
+
+    </div>
   </div>
 
 </div>
 
+<!-- 🎵 Music -->
 <audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<script src="script.js"></script>
 <!-- 💖 Popup -->
 <div id="popup" class="popup hidden">
   <span class="close" onclick="closePopup()">×</span>
   <img id="popupImg">
   <p id="popupText"></p>
 </div>
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+
+<script src="script.js"></script>
+
 </body>
 </html>

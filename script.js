@@ -45,11 +45,15 @@ function toggleMusic() {
     isPlaying = false;
   }
 
-  const unlockDate = new Date("2026-04-06T00:00:00+05:30");
-
-
+  
+}
+// 🔒 LOCK SCREEN TIMER
+const unlockDate = new Date("2026-04-06T00:00:00+05:30");
 
 function updateCountdown() {
+  const countdown = document.getElementById("countdown");
+  if (!countdown) return;
+
   const now = new Date();
   const diff = unlockDate - now;
 
@@ -63,11 +67,9 @@ function updateCountdown() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("countdown").innerText =
-    `${hours}h ${minutes}m ${seconds}s`;
+  countdown.innerText = `${hours}h ${minutes}m ${seconds}s`;
 }
 
-/* 🔥 IMPORTANT: call it properly */
+// 🔥 RUN AUTOMATICALLY
 updateCountdown();
 setInterval(updateCountdown, 1000);
-}

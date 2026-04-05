@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff758c, #ffb199);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* soft glow background */
+body::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+  animation: moveBg 10s linear infinite;
+}
+
+@keyframes moveBg {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+.container {
+  padding: 20px;
+}
+
+/* buttons */
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.4);
+}
+
+/* gallery cards */
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 200px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* love letter */
+.letter {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.3);
+}
+
+/* reasons */
+.reasons {
+  list-style: none;
+  padding: 0;
+}
+
+.reasons li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* floating hearts */
+.hearts::before {
+  content: "💖 💕 💗 💓 💞";
+  position: fixed;
+  font-size: 20px;
+  animation: float 8s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}

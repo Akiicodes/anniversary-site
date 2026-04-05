@@ -17,7 +17,7 @@
   <p id="timer"></p>
 
   <button onclick="showLoveLetter()">Open Something Special 💌</button>
-  <button onclick="playMusic()">Play Our Song 🎵</button>
+  <button onclick="toggleMusic()" id="musicBtn">Play Our Song 🎵</button>
 
   <!-- 💌 Love Letter -->
   <div id="letterBox" class="letter hidden">
@@ -90,5 +90,8 @@
   <img id="popupImg">
   <p id="popupText"></p>
 </div>
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 </body>
 </html>

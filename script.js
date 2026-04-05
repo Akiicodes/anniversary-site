@@ -47,6 +47,8 @@ function toggleMusic() {
 
   const unlockDate = new Date("2026-04-06T00:00:00+05:30");
 
+
+
 function updateCountdown() {
   const now = new Date();
   const diff = unlockDate - now;
@@ -65,5 +67,7 @@ function updateCountdown() {
     `${hours}h ${minutes}m ${seconds}s`;
 }
 
+/* 🔥 IMPORTANT: call it properly */
+updateCountdown();
 setInterval(updateCountdown, 1000);
 }

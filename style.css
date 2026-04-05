@@ -50,16 +50,20 @@ button:hover {
   gap: 15px;
   overflow-x: auto;
   padding: 15px;
+  scroll-snap-type: x mandatory;   /* ✨ smooth swipe */
 }
 
 .card {
   background: rgba(255,255,255,0.15);
   border-radius: 20px;
   padding: 10px;
-  min-width: 200px;
+  min-width: 220px;
   backdrop-filter: blur(10px);
   transition: 0.3s;
+
+  scroll-snap-align: center;   /* ✨ IMPORTANT */
 }
+
 
 .card:hover {
   transform: scale(1.05);

@@ -32,6 +32,11 @@ body::before {
 .container {
   padding: 20px;
 }
+#popupText {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
 
 /* buttons */
 button {
@@ -124,6 +129,16 @@ button:hover {
 .card img {
   cursor: pointer;
   transition: 0.3s;
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+  background: rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
 }
 
 .card img:hover {
